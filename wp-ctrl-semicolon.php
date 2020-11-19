@@ -17,7 +17,7 @@ add_action( 'wp_head', function () {
 	global $post;
 	if ( $post && current_user_can( 'edit_post', $post->ID ) ) {
 		$id = $post->ID;
-		if ( $id ) {
+		if ( is_single() && $id ) {
 			$link = get_edit_post_link( $id );
 			if ( $link ) {
 				echo "<link rel='edit-form' href='$link'>";
