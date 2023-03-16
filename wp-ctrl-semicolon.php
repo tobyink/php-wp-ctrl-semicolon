@@ -32,6 +32,6 @@ add_action( 'wp_head', function () {
 
 add_action( 'wp_enqueue_scripts', function () {
 	$plugin = plugin_dir_url( __FILE__ ) . 'js/';
-	wp_enqueue_script( 'hotkeys', $plugin . 'hotkeys.min.js', [], '3.8.1' );
+	wp_enqueue_script( 'hotkeys', $plugin . 'hotkeys.min.js', [], '3.8.1', true );
 	wp_enqueue_script( 'ctrl-semicolon', $plugin . 'site.js', ['jquery', 'hotkeys'], '1.0', true );
 } );
